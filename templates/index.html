@@ -4,11 +4,11 @@
     <title>Chatbot</title>
     <style>
         body {
-            background-color: #d3d3d3; /* Light Ash Color */
+            background-color: #d3d3d3; 
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full viewport height */
+            height: 100vh; 
             margin: 0;
             text-align: center;
             font-family: Arial, sans-serif;
@@ -71,7 +71,7 @@
         }
 
         function extractContext(text) {
-            // Extract only the context part (filtering out unwanted instructions)
+    
             let match = text.match(/Context:(.*)/i);
             return match ? match[1].trim() : "Context not found.";
         }
