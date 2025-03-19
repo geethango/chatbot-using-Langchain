@@ -1,74 +1,37 @@
-# Flask Chatbot with LangChain & Hugging Face
 
-This project is a Flask-based chatbot application that utilizes LangChain for retrieval-augmented generation (RAG) and Hugging Face models for text generation and embedding.
+# Chatbot using Langchain
 
-## Features
-- Uses **GPT-2** for text generation.
-- Embedding model: **sentence-transformers/all-MiniLM-L6-v2**.
-- Stores and retrieves embeddings using **ChromaDB**.
-- Custom prompt for generating concise answers.
-- REST API endpoint (`/ask`) for chatbot interaction.
+This is a Flask-based chatbot using LangChain and Hugging Face models.
 
-## Installation
+## How to Run This Project
 
 ### 1. Clone the Repository
+
+
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-2. Install Dependencies
-Ensure you have Python installed (recommended: Python 3.8+). Then, install the required libraries:
+  git clone https://github.com/geethango/chatbot-using-Langchain.git
+```
 
-bash
-Copy
-Edit
-pip install flask langchain langchain_huggingface langchain_chroma transformers sentence-transformers
-3. Run the Application
-bash
-Copy
-Edit
-python app.py
-By default, the app runs on http://0.0.0.0:5000.
+Go to the project directory
 
-API Usage
-1. Homepage
-GET /
-Loads the chatbot interface.
-2. Ask a Question
-POST /ask
-Request Body (JSON):
-json
-Copy
-Edit
-{
-  "question": "What is artificial intelligence?"
-}
-Response (JSON):
-json
-Copy
-Edit
-{
-  "answer": "AI is the simulation of human intelligence in machines..."
-}
-Customization
-Modify the Hugging Face model in:
-python
-Copy
-Edit
-model_pipeline = pipeline("text-generation", model="gpt2", max_new_tokens=200)
-Change the embedding model in:
-python
-Copy
-Edit
-embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-Adjust the ChromaDB storage path:
-python
-Copy
-Edit
-persist_directory = "docs/chroma/"
-License
-This project is licensed under the MIT License.
+```bash
+  cd chatbot-using-Langchain
+```
 
-Author
-Your Name
-GitHub: your-username
-Email: your.email@example.com
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+Run Jupyter Notebook
+
+In the Jupyter interface, open the extraction.ipynb notebook.
+Run all the cells
+
+Start the server
+
+```bash
+  python app.py
+
+```
+

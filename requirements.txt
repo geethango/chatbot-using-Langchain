@@ -4,3 +4,5 @@ bs4
 sentence-transformers
 chromadb
 flask
+langchain_huggingface
+langchain_chroma
